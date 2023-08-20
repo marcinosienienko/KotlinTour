@@ -1,32 +1,18 @@
 fun main(args: Array<String>) {
-    val popcorn = 5
-    val hotdog = 7
-    //var customers = 10
+    val readOnlyShapes = listOf("triangle", "square", "circle")
+    println("First item on the list is: ${readOnlyShapes.first()} ")
+    println("Last item on the list is: ${readOnlyShapes.last()} ")
+    println("This list has: ${readOnlyShapes.count()} items")
+    println("rectangle" in readOnlyShapes)
 
-    //customers = 8
+    val shapes : MutableList<String> = mutableListOf("triangle", "square", "circle")
+    val shapesLocked : List<String>  = shapes
+    shapes.add("pentagon")
+    println(shapes.last())
+    shapes.remove(shapes.first())
+    println(shapes)
+    shapes.remove("circle")
+    println(shapes)
 
-    val customers = 10
-    println("There are $customers customers")
-    println("There are ${customers + 1} customers")
-
-
-    val name = "Mary"
-    val age = 20
-
-    println("$name is $age years old")
-
-    var members = 10
-
-    members -= 3
-    println("Members = $members")
-
-    members += 7
-    println("Members = $members")
-
-    members *= 2
-    println("Members = $members")
-
-    members /= 4
-    println("Members = $members")
 
 }
