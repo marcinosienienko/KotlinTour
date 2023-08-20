@@ -1,18 +1,16 @@
 fun main(args: Array<String>) {
-    val readOnlyShapes = listOf("triangle", "square", "circle")
-    println("First item on the list is: ${readOnlyShapes.first()} ")
-    println("Last item on the list is: ${readOnlyShapes.last()} ")
-    println("This list has: ${readOnlyShapes.count()} items")
-    println("rectangle" in readOnlyShapes)
 
-    val shapes : MutableList<String> = mutableListOf("triangle", "square", "circle")
-    val shapesLocked : List<String>  = shapes
-    shapes.add("pentagon")
-    println(shapes.last())
-    shapes.remove(shapes.first())
-    println(shapes)
-    shapes.remove("circle")
-    println(shapes)
+    val readOnlyFruit = setOf("apple", "cherry", "banana", "banana")
+    val fruit: MutableSet<String> = mutableSetOf("apple", "cherry", "banana", "banana")
+    val fruitLocked: Set<String> = fruit
 
+    println(fruitLocked)
 
+    println("This set has ${fruit.count()} items")
+
+    fruit.add("dragonfruit")
+    println(fruit)
+
+    fruit.remove("banana")
+    println(fruit)
 }
